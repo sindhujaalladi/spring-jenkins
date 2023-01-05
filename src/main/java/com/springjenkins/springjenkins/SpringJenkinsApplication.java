@@ -15,10 +15,12 @@ public class SpringJenkinsApplication {
 
     @GetMapping("/print")
     public String getMessage(){
+        logger.info("spring jenkins application : getMessage method started");
         return "hi welcome to jenkins application deployed successfully into jenkins";
     }
 
     public static void main(String[] args) {
+        logger.info("jenkins application started");
         SpringApplication.run(SpringJenkinsApplication.class, args);
     }
 
